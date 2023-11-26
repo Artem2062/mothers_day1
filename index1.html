@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="bod">
+    <div class="wrapper">
+        <div class="heart" id="hear"></div>
+    </div>
+    <script>
+        "use strict";
+        let x=0;
+        let y=0;
+        document.addEventListener('mousemove', function (e) {
+            x=e.clientX
+            y=e.clientY
+            hear.style.left=x-200+"px"
+            hear.style.top=y-140+"px"
+        })
+        let counter = 1;
+        bod.classList.add('bgcolor1');
+        document.addEventListener('click', function () {
+            bod.classList.remove('bgcolor1');
+            bod.classList.remove('bgcolor2');
+            bod.classList.remove('bgcolor3');
+            if (++counter == 4) counter = 1;
+            switch (counter){
+                case 1:
+                    bod.classList.add('bgcolor1');
+                    break;
+                case 2:
+                    bod.classList.add('bgcolor2');
+                    break;
+                case 3:
+                    bod.classList.add('bgcolor3');
+                    break;
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.heart {
+    width: 200px;
+    height: 200px; 
+    background-color: red; 
+    transform: rotate(45deg);
+    position: relative;
+    margin: 80px;
+}
+
+.bgcolor1{
+    background: rgb(143, 18, 168);
+}
+.bgcolor2{
+    background: rgb(255, 0, 106);
+}
+.bgcolor3{
+    background: rgb(255, 0, 234);
+}
+
+.heart::before,
+.heart::after {
+    content : ''; 
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+.heart::before {
+    top: -100px;
+    left: 0;
+}
+.heart::after {
+    top: 0;
+    left: -100px;
+}
